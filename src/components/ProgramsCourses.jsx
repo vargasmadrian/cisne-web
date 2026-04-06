@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProgramsCourses.css';
 
 export default function ProgramsCourses() {
   const base = import.meta.env.BASE_URL;
+  const navigate = useNavigate();
   
   return (
     <div className="programs-container">
@@ -10,7 +12,7 @@ export default function ProgramsCourses() {
       
       <div 
         className="program-card" 
-        onClick={() => alert('¡Redirigiendo a los detalles del programa!')}>
+        onClick={() => navigate('/programa')}>
         
         <div className="program-image-container">
           <img 
