@@ -1,0 +1,111 @@
+.programs-container {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.lined-title {
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: var(--accent-hover);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.lined-title::before,
+.lined-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20%;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+}
+.lined-title::before { left: 0; }
+.lined-title::after { right: 0; }
+
+.program-card {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #111;
+}
+
+.program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border-color: rgba(255,255,255,0.25);
+}
+
+.program-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.program-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.85) 100%);
+  z-index: 2;
+}
+
+.share-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  padding: 0.55rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.2s ease;
+}
+
+.share-button:hover {
+  background: rgba(0,0,0,0.7);
+  transform: scale(1.1);
+}
+
+.program-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 1.25rem;
+  z-index: 3;
+}
+
+.program-info h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.program-info p {
+  font-size: 0.85rem;
+  color: #e5e5ea;
+  font-weight: 500;
+}
