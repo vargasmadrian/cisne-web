@@ -1,0 +1,43 @@
+.app-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 10; /* above video background */
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.25; /* Dimmed to keep text prominent */
+  pointer-events: none;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(5,5,5,0.3) 0%, rgba(5,5,5,0.95) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 2rem 1.25rem;
+    max-width: 100%;
+  }
+}

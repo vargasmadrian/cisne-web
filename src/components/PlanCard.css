@@ -1,0 +1,86 @@
+.plan-card {
+  position: relative;
+  text-align: center;
+  padding: 2.5rem 2rem !important;
+  border: 1px solid rgba(192, 132, 252, 0.3) !important;
+  background: linear-gradient(180deg, rgba(192, 132, 252, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(192, 132, 252, 0.15);
+  border-color: rgba(192, 132, 252, 0.6) !important;
+}
+.pulse-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-color);
+  color: var(--bg-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: pulseBadge 2s infinite;
+}
+@keyframes pulseBadge {
+  0% { box-shadow: 0 0 0 0 rgba(192, 132, 252, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(192, 132, 252, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(192, 132, 252, 0); }
+}
+.plan-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.price-tag {
+  margin-bottom: 1.5rem;
+}
+.price-tag .currency {
+  font-size: 1.2rem;
+  vertical-align: top;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+.price-tag .amount {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.price-tag .period {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+.features-list {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+.features-list li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.buy-button {
+  width: 100%;
+  background: var(--accent-color);
+  color: var(--bg-color);
+  font-size: 1rem;
+  padding: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(192, 132, 252, 0.4);
+}
+.buy-button:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 6px 20px rgba(192, 132, 252, 0.6);
+  transform: translateY(-2px) scale(0.98);
+}

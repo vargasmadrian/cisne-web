@@ -1,0 +1,34 @@
+.success-cases {
+  text-align: center;
+  padding: 1.5rem !important;
+}
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+}
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.case-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.2);
+}
+.case-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* or cover based on the quality of the image */
+  background: #000;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.case-card:hover img {
+  transform: scale(1.05);
+}
