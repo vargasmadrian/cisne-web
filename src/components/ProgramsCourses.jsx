@@ -12,7 +12,7 @@ export default function ProgramsCourses() {
         className="program-card" 
         onClick={() => alert('¡Redirigiendo a los detalles del programa!')}>
         <img 
-          src={`${base}images/Gemini_Generated_Image_.png`} 
+          src={`${base}images/fotoplaya_hd.png`} 
           alt="Programa de Transformación" 
           className="program-bg" 
         />
