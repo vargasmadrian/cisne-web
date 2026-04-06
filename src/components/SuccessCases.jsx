@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import './SuccessCases.css';
 
 export default function SuccessCases() {
@@ -9,6 +10,15 @@ export default function SuccessCases() {
     `${base}images/WhatsApp Image 2026-03-01 at 14.01.30.jpeg`,
     `${base}images/Gemini_Generated_Image_.png`
   ];
+
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [selectedImage]);
 
   return (
     <>
@@ -23,10 +33,12 @@ export default function SuccessCases() {
         </div>
       </div>
 
-      {selectedImage && (
+      {/* Global Portal para evitar conflictos de Position Fixed */}
+      {selectedImage && createPortal(
         <div className="lightbox-modal" onClick={() => setSelectedImage(null)}>
           <img src={selectedImage} alt="Transformación Ampliada" />
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

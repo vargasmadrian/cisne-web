@@ -47,16 +47,17 @@
 
 .ambient-glow {
   position: fixed;
-  top: 18vh; /* Altura ideal en PC para coincidir con el nombre de Cisne */
+  top: 15vh; /* Altura ideal en PC para coincidir con el nombre de Cisne */
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
-  opacity: 0.08; /* Casi imperceptible, ultra sutil */
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--accent-color) 0%, transparent 65%);
+  opacity: 0.35; /* Mucho más visible para que se note el destello púrpura */
   z-index: 2; /* Encima del video, debajo del contenido general de la app */
   pointer-events: none;
-  filter: blur(60px);
+  filter: blur(80px);
+  mix-blend-mode: screen; /* Efecto de brillo de luz sobre el fondo oscuro */
 }
 
 @media (max-width: 480px) {

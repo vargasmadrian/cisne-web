@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router-dom';
 import './ProgramDetails.css';
 
@@ -7,10 +8,19 @@ export default function ProgramDetails() {
   const base = import.meta.env.BASE_URL;
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Scroll to top on load
+  // Scroll to top on load and manage body scroll lock for lightbox
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [selectedImage]);
 
   return (
     <div className="program-details-container">
@@ -129,10 +139,11 @@ export default function ProgramDetails() {
       </div>
 
       {/* Global Lightbox for Program Details */}
-      {selectedImage && (
+      {selectedImage && createPortal(
         <div className="lightbox-modal" onClick={() => setSelectedImage(null)}>
           <img src={selectedImage} alt="Transformación Ampliada" />
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
