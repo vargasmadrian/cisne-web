@@ -47,27 +47,24 @@
 
 .ambient-glow {
   position: fixed;
-  top: 15vh;
+  top: 5vh;
   left: 50%;
   transform: translateX(-50%);
-  width: 500px;
-  height: 500px;
-  /* Púrpura lavanda igual al glow de la foto de perfil (#c084fc) */
-  background: radial-gradient(circle, rgba(192, 132, 252, 0.6) 0%, rgba(192, 132, 252, 0) 65%);
-  opacity: 0.4;
+  width: 120vw;
+  height: 120vw;
+  /* Gradiente enorme y suave — NO necesita filter:blur para verse difuminado */
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.25) 0%, rgba(192, 132, 252, 0.08) 30%, rgba(192, 132, 252, 0) 55%);
   z-index: 2;
   pointer-events: none;
-  /* Sin mix-blend-mode ni filter:blur — Safari móvil los ignora con position:fixed */
-  -webkit-filter: blur(80px);
-  filter: blur(80px);
+  /* Sin filter:blur — Safari móvil lo ignora en position:fixed */
 }
 
 @media (max-width: 480px) {
   .ambient-glow {
-    top: 22vh;
-    width: 350px;
-    height: 350px;
-    opacity: 0.5; /* Un poco más fuerte en móvil para compensar pantalla pequeña */
+    top: 8vh;
+    width: 150vw;
+    height: 150vw;
+    background: radial-gradient(circle, rgba(192, 132, 252, 0.35) 0%, rgba(192, 132, 252, 0.12) 25%, rgba(192, 132, 252, 0) 50%);
   }
 }
 
