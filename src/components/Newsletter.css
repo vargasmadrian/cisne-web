@@ -97,17 +97,26 @@
   gap: 0.75rem;
 }
 
-.country-code {
+.country-code-container {
+  display: flex;
+}
+
+.country-code-select {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  padding: 0 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
+  padding: 0 0.5rem 0 1rem;
   color: #8c8c94;
+  font-size: 0.95rem;
   cursor: pointer;
+  height: 100%;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.country-code-select:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .phone-input .input-with-icon {

@@ -39,8 +39,17 @@ export default function Newsletter() {
         <div className="form-group">
           <label>TELÉFONO</label>
           <div className="phone-input">
-            <div className="country-code">
-              <span className="flag">🇪🇸</span> +34 ⌄
+            <div className="country-code-container">
+              <select className="country-code-select" defaultValue="+34">
+                <option value="+34">🇪🇸 +34</option>
+                <option value="+593">🇪🇨 +593</option>
+                <option value="+52">🇲🇽 +52</option>
+                <option value="+57">🇨🇴 +57</option>
+                <option value="+54">🇦🇷 +54</option>
+                <option value="+56">🇨🇱 +56</option>
+                <option value="+51">🇵🇪 +51</option>
+                <option value="+1">🇺🇸 +1</option>
+              </select>
             </div>
             <div className="input-with-icon no-bg">
               <span className="icon">📞</span>
