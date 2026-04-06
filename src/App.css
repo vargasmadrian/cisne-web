@@ -74,10 +74,10 @@
 /* Segunda luz para PC — zona baja */
 .ambient-glow.glow-bottom {
   top: auto;
-  bottom: -20vh;
+  bottom: -300px; /* Mitad del círculo visible desde abajo */
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(192, 132, 252, 0.18) 0%, rgba(192, 132, 252, 0.05) 35%, rgba(192, 132, 252, 0) 55%);
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.25) 0%, rgba(192, 132, 252, 0.08) 35%, rgba(192, 132, 252, 0) 55%);
 }
 
 /* Global Lightbox Effect para Imágenes (Transformaciones) */
