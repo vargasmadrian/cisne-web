@@ -6,6 +6,7 @@
   background: rgba(20, 20, 25, 0.95) !important;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 65%; /* Más angosto, como el products card de la referencia */
 }
 .plan-card:hover {
   transform: translateY(-5px);
@@ -39,7 +40,7 @@
 .plan-image-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1; /* Cuadrado: muestra desde rostro hasta la cola */
+  aspect-ratio: 3 / 4; /* Vertical como en la referencia */
   overflow: hidden;
 }
 
