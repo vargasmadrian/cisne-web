@@ -39,7 +39,7 @@
 .plan-image-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4; /* Más alto para mostrar rostro + espalda + cola */
   overflow: hidden;
 }
 
@@ -47,7 +47,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%; /* Muestra rostro, espalda, hasta mitad de cola */
+  object-position: center top; /* Empieza desde arriba para no cortar el rostro */
 }
 
 .plan-image-overlay {
