@@ -20,6 +20,7 @@ export default function ProgramsCourses() {
             alt="Programa de Transformación" 
             className="program-bg" 
           />
+          <div className="program-overlay"></div>
           
           <div className="share-button" onClick={(e) => {
               e.stopPropagation();
@@ -33,11 +34,11 @@ export default function ProgramsCourses() {
               <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
             </svg>
           </div>
-        </div>
 
-        <div className="program-info">
-          <h4>Glúteos y piernas de Acero: Programa de Transformación en 4 Semanas</h4>
-          <p>4 weeks · $29.99</p>
+          <div className="program-info">
+            <h4>Glúteos y piernas de Acero: Programa de Transformación en 4 Semanas</h4>
+            <p>4 weeks · $29.99</p>
+          </div>
         </div>
       </div>
     </div>
