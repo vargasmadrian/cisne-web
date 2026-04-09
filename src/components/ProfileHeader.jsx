@@ -17,7 +17,7 @@ export default function ProfileHeader() {
       <p className="profile-bio">Fitness Coach | Transforma tu físico desde casa o en el gym 💪✨</p>
       <div className="metrics">
         <div className="metric">
-          <span className="metric-number">250K+</span>
+          <span className="metric-number">70K+</span>
           <span className="metric-label">Followers</span>
         </div>
         <div className="metric">
